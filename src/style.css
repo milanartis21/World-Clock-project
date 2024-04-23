@@ -1,0 +1,12 @@
+body{
+    background: plum;
+}
+
+input {
+    padding: 10px;
+    border-radius: 8px;
+}
+
+label {
+    display: block;
+}
