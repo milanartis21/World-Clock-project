@@ -1,13 +1,13 @@
 function updateTime() {
-    // Los Angeles
-    let losAngelesElement = document.querySelector("#los-angeles");
-    if (losAngelesElement) {
-      let losAngelesDateElement = losAngelesElement.querySelector(".date");
-      let lostAngelesTimeElement = losAngelesElement.querySelector(".time");
-      let losAngelesTime = moment().tz("America/Los_Angeles");
+    // london
+    let londonElement = document.querySelector("#london");
+    if (londonElement) {
+      let londonDateElement = londonElement.querySelector(".date");
+      let londonTimeElement = londonElement.querySelector(".time");
+      let londonTime = moment().tz("Europe/London");
   
-      losAngelesDateElement.innerHTML = losAngelesTime.format("MMMM	Do YYYY");
-      lostAngelesTimeElement.innerHTML = losAngelesTime.format(
+      londonDateElement.innerHTML = londonTime.format("MMMM	Do YYYY");
+      londonTimeElement.innerHTML = londonTime.format(
         "h:mm:ss [<small>]A[</small>]"
       );
     }
@@ -26,6 +26,20 @@ function updateTime() {
     }
   }
   
+
+  //Tokyo
+   let tokyoElement = document.querySelector("#tokyo");
+   if (tokyoElement) {
+     let tokyoDateElement = tokyoElement.querySelector(".date");
+     let tokyoTimeElement = tokyoElement.querySelector(".time");
+     let tokyoTime = moment().tz("Asia/Tokyo");
+ 
+     tokyoDateElement.innerHTML = tokyoTime.format("MMMM	Do YYYY");
+     tokyoTimeElement.innerHTML = tokyoTime.format(
+       "h:mm:ss [<small>]A[</small>]"
+     );
+   }
+ 
   function updateCity(event) {
     let cityTimeZone = event.target.value;
     if (cityTimeZone === "current") {
